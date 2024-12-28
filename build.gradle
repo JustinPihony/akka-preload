@@ -1,0 +1,50 @@
+plugins {
+    // Apply the Gradle Scala plugin so we can compile Scala code
+    id 'scala'
+    // Alternatively, you can also apply the Java plugin if needed:
+    // id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+// Adjust these if necessary
+ext {
+    akkaVersion = '2.10.0'
+    scalaBinaryVersion = '2.13'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    
+    maven {
+        url 'https://repo.akka.io/maven'
+    }
+}
+
+dependencies {
+    // Akka Actor (Classic)
+    implementation "com.typesafe.akka:akka-actor_${scalaBinaryVersion}:${akkaVersion}"
+    
+    // Akka Actor (Typed)
+    implementation "com.typesafe.akka:akka-actor-typed_${scalaBinaryVersion}:${akkaVersion}"
+
+    // Akka Streams (Classic)
+    implementation "com.typesafe.akka:akka-stream_${scalaBinaryVersion}:${akkaVersion}"
+
+    // Akka Streams (Typed)
+    implementation "com.typesafe.akka:akka-stream-typed_${scalaBinaryVersion}:${akkaVersion}"
+
+    // Akka Cluster (Classic)
+    implementation "com.typesafe.akka:akka-cluster_${scalaBinaryVersion}:${akkaVersion}"
+
+    // Akka Cluster (Typed)
+    implementation "com.typesafe.akka:akka-cluster-typed_${scalaBinaryVersion}:${akkaVersion}"
+
+    // Akka TestKit for testing Classic
+    testImplementation "com.typesafe.akka:akka-testkit_${scalaBinaryVersion}:${akkaVersion}"
+
+    // Akka TestKit for testing Typed
+    testImplementation "com.typesafe.akka:akka-actor-testkit-typed_${scalaBinaryVersion}:${akkaVersion}"
+}
