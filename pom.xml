@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>akka-stuff</artifactId>
+  <version>1.0.0</version>
+  <name>Akka Load To Cache</name>
+
+  <properties>
+    <akka.version>2.10.0</akka.version>
+    <scala.binary.version>2.13</scala.binary.version>
+  </properties>
+
+  <dependencies>
+    <!-- Akka Actor (Classic) -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-actor_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+    </dependency>
+    
+    <!-- Akka Actor (Typed) -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-actor-typed_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+    </dependency>
+    
+    <!-- Akka Streams (Classic) -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-stream_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+    </dependency>
+    
+    <!-- Akka Streams (Typed) -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-stream-typed_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+    </dependency>
+    
+    <!-- Akka Cluster (Classic) -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-cluster_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+    </dependency>
+    
+    <!-- Akka Cluster (Typed) -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-cluster-typed_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+    </dependency>
+    
+    <!-- Akka TestKit for testing Classic and Typed APIs -->
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-testkit_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-actor-testkit-typed_${scala.binary.version}</artifactId>
+      <version>${akka.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <!-- Maven Central for standard artifacts -->
+    <repository>
+      <id>central</id>
+      <name>Maven Central</name>
+      <url>https://repo.akka.io/maven</url>
+    </repository>
+  </repositories>
+
+</project>
