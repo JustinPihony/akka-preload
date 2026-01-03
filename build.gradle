@@ -23,6 +23,14 @@ repositories {
     }
 }
 
+repositories {
+    maven {
+        mavenCentral()
+        url = 'https://repo.akka.io/maven/codemash'
+        mavenLocal()
+    }
+}
+
 dependencies {
     // Akka Actor (Classic)
     implementation "com.typesafe.akka:akka-actor_${scalaBinaryVersion}:${akkaVersion}"
