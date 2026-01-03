@@ -21,6 +21,6 @@ lazy val root = (project in file("."))
       "com.typesafe.akka" %% "akka-actor-testkit-typed"   % akkaVersion % Test
     ),
 
-    resolvers in ThisBuild += "akka-secure-mvn" at "https://repo.akka.io/codemash/maven"
-    resolvers in ThisBuild += Resolver.url("akka-secure-ivy", url("https://repo.akka.io/codemash/maven"))(Resolver.ivyStylePatterns)
+    resolvers in ThisBuild += "akka-secure-mvn" at "https://repo.akka.io/maven/codemash"
+    resolvers in ThisBuild += Resolver.url("akka-secure-ivy", url("https://repo.akka.io/maven/codemash"))(Resolver.ivyStylePatterns)
   )

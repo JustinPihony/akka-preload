@@ -77,7 +77,7 @@
     <repository>
       <id>akka-secure</id>
       <name>Akka Secure</name>
-      <url>https://repo.akka.io/codemash/maven</url>
+      <url>https://repo.akka.io/maven/codemash</url>
     </repository>
   </repositories>
 
@@ -85,7 +85,7 @@
     <pluginRepository>
       <id>akka-secure-plugins</id>
       <name>Akka Secure Plugins</name>
-      <url>https://repo.akka.io/codemash/maven</url>
+      <url>https://repo.akka.io/maven/codemash</url>
     </pluginRepository>
   </pluginRepositories>
 </project>
