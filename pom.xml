@@ -10,7 +10,7 @@
   <name>Akka Load To Cache</name>
 
   <properties>
-    <akka.version>2.10.0</akka.version>
+    <akka.version>2.10.14</akka.version>
     <scala.binary.version>2.13</scala.binary.version>
   </properties>
 
@@ -75,10 +75,17 @@
   <repositories>
     <!-- Maven Central for standard artifacts -->
     <repository>
-      <id>central</id>
-      <name>Maven Central</name>
-      <url>https://repo.akka.io/maven</url>
+      <id>akka-secure</id>
+      <name>Akka Secure</name>
+      <url>https://repo.akka.io/codemash/maven</url>
     </repository>
   </repositories>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>akka-secure-plugins</id>
+      <name>Akka Secure Plugins</name>
+      <url>https://repo.akka.io/codemash/maven</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
