@@ -1,6 +1,6 @@
 ThisBuild / scalaVersion := "2.13.15" 
 
-lazy val akkaVersion = "2.10.0"
+lazy val akkaVersion = "2.10.14"
 
 lazy val root = (project in file("."))
   .settings(
@@ -21,5 +21,6 @@ lazy val root = (project in file("."))
       "com.typesafe.akka" %% "akka-actor-testkit-typed"   % akkaVersion % Test
     ),
 
-    resolvers += "Akka Maven" at "https://repo.akka.io/maven"
+    resolvers in ThisBuild += "akka-secure-mvn" at "https://repo.akka.io/codemash/maven"
+    resolvers in ThisBuild += Resolver.url("akka-secure-ivy", url("https://repo.akka.io/codemash/maven"))(Resolver.ivyStylePatterns)
   )
