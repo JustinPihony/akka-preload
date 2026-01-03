@@ -10,7 +10,7 @@ version = '1.0.0'
 
 // Adjust these if necessary
 ext {
-    akkaVersion = '2.10.0'
+    akkaVersion = '2.10.14'
     scalaBinaryVersion = '2.13'
 }
 
