@@ -48,3 +48,25 @@ dependencies {
     // Akka TestKit for testing Typed
     testImplementation "com.typesafe.akka:akka-actor-testkit-typed_${scalaBinaryVersion}:${akkaVersion}"
 }
+
+tasks.register("conferenceWarmup") {
+    group = "Help"
+    description = "Forces the physical download of all artifacts into the Gradle cache"
+    doLast {
+        // We target 'runtimeClasspath' and 'testRuntimeClasspath' because they
+        // contain everything in 'implementation' plus transitive dependencies.
+        def resolvableConfigs = ['runtimeClasspath', 'testRuntimeClasspath']
+        
+        resolvableConfigs.each { configName ->
+            def conf = configurations.findByName(configName)
+            if (conf && conf.canBeResolved) {
+                println "--- Resolving Artifacts for: ${configName} ---"
+                // .files is the "magic" call that forces a physical download 
+                // of the JARs to your local machine.
+                conf.files.each { file -> 
+                    println "Cached: ${file.absolutePath}" 
+                }
+            }
+        }
+    }
+}
