@@ -2,4 +2,4 @@ In order to preload the Akka dependencies into your local cache you can download
 
 * Maven: `mvn dependency:resolve`
 * sbt: `sbt update`
-* Gradle: `gradle build --refresh-dependencies`
+* Gradle: `gradle conferenceWarmup --refresh-dependencies`
